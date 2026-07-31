@@ -33,6 +33,19 @@ Bucket de Storage `book-files` (privado) guarda os PDFs originais, isolados por 
 
 Login/Cadastro · Estante · Adicionar livro (upload + extração) · Detalhes do livro · Leitor (TTS) · Configurações.
 
+## Instalar como app pelo Chrome (PWA)
+
+O app já é um PWA instalável — sem loja de aplicativo, sem Android Studio, direto do navegador:
+
+1. Publique o app em algum lugar com HTTPS (ex: Vercel — veja abaixo) ou acesse pelo `npm run dev`/`npm run preview` na mesma rede do celular.
+2. Abra o link no **Chrome do celular**.
+3. Toque no menu (⋮) → **"Instalar app"** (ou **"Adicionar à tela inicial"**).
+4. O ícone aparece na tela inicial e abre em tela cheia, sem a barra do navegador — funciona como um app normal.
+
+No iPhone (Safari) o caminho é: botão de compartilhar → **"Adicionar à Tela de Início"**.
+
+Isso já cobre a maioria dos casos de "quero o app no meu celular" sem nenhuma fricção. A rota abaixo (Capacitor/.apk) só vale a pena se você quiser publicar na Play Store ou usar APIs nativas do Android.
+
 ## Gerar o app Android (.apk)
 
 O projeto já vem com [Capacitor](https://capacitorjs.com) configurado, empacotando o app web dentro de um projeto Android nativo (pasta `android/`), com ícone e splash screen já gerados a partir da marca do app.
