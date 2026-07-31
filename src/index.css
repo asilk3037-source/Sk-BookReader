@@ -1,0 +1,84 @@
+:root {
+  --bg: #f5ead8;
+  --ink: #201e1d;
+  --ink-dim: rgba(32, 30, 29, 0.5);
+  --ink-faint: rgba(32, 30, 29, 0.35);
+  --card: #ebddc5;
+  --card-hover: #e0cdad;
+  --input-bg: #fffaf0;
+  --border: rgba(32, 30, 29, 0.14);
+  --accent: #c67139;
+  --accent-hover: #a8542c;
+  --green: #7a8a5e;
+  --font-display: 'Caprasimo', serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: #12100f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  min-height: 100svh;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.text-wrap-pretty {
+  text-wrap: pretty;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
